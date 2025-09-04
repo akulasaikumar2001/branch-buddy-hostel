@@ -80,11 +80,11 @@ export default {
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
 			},
-			boxShadow: {
-				'primary': '0 10px 25px -5px hsl(219 78% 50% / 0.3)',
-				'card': '0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)',
-				'elegant': '0 10px 30px -10px rgb(0 0 0 / 0.1)'
-			},
+				boxShadow: {
+					'primary': '0 10px 25px -5px hsl(220 13% 18% / 0.15)',
+					'card': '0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)',
+					'elegant': '0 10px 30px -10px rgb(0 0 0 / 0.1)'
+				},
 			keyframes: {
 				'accordion-down': {
 					from: {
