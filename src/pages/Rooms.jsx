@@ -19,8 +19,8 @@ import {
 
 export default function Rooms() {
   const [searchTerm, setSearchTerm] = useState("");
-  const [selectedBranch, setSelectedBranch] = useState<string>("all");
-  const [selectedStatus, setSelectedStatus] = useState<string>("all");
+  const [selectedBranch, setSelectedBranch] = useState("all");
+  const [selectedStatus, setSelectedStatus] = useState("all");
 
   const filteredRooms = rooms.filter(room => {
     const matchesSearch = room.roomNumber.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -31,7 +31,7 @@ export default function Rooms() {
     return matchesSearch && matchesBranch && matchesStatus;
   });
 
-  const getStatusColor = (status: string) => {
+  const getStatusColor = (status) => {
     switch (status) {
       case 'available': return "bg-success text-success-foreground";
       case 'full': return "bg-destructive text-destructive-foreground";
@@ -40,7 +40,7 @@ export default function Rooms() {
     }
   };
 
-  const getTypeIcon = (type: string) => {
+  const getTypeIcon = (type) => {
     switch (type) {
       case 'single': return "1";
       case 'double': return "2"; 
@@ -50,7 +50,7 @@ export default function Rooms() {
     }
   };
 
-  const getAmenityIcon = (amenity: string) => {
+  const getAmenityIcon = (amenity) => {
     switch (amenity.toLowerCase()) {
       case 'ac': return <Snowflake className="h-3 w-3" />;
       case 'wifi': return <Wifi className="h-3 w-3" />;

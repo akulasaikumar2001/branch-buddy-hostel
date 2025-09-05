@@ -1,7 +1,5 @@
-import { Branch, Room, Student, DashboardStats } from '@/types';
-
 // Sample data for demonstration
-export const branches: Branch[] = [
+export const branches = [
   {
     id: '1',
     name: 'Downtown Branch',
@@ -46,7 +44,7 @@ export const branches: Branch[] = [
   },
 ];
 
-export const rooms: Room[] = [
+export const rooms = [
   {
     id: '1',
     branchId: '1',
@@ -82,7 +80,7 @@ export const rooms: Room[] = [
   },
 ];
 
-export const students: Student[] = [
+export const students = [
   {
     id: '1',
     name: 'Arjun Singh',
@@ -130,7 +128,7 @@ export const students: Student[] = [
   },
 ];
 
-export const getDashboardStats = (): DashboardStats => {
+export const getDashboardStats = () => {
   const totalBranches = branches.length;
   const totalRooms = branches.reduce((sum, branch) => sum + branch.totalRooms, 0);
   const totalStudents = students.length;
@@ -159,7 +157,7 @@ export const getDashboardStats = (): DashboardStats => {
   };
 };
 
-export const getBranchById = (id: string) => branches.find(b => b.id === id);
-export const getRoomsByBranchId = (branchId: string) => rooms.filter(r => r.branchId === branchId);
-export const getStudentsByBranchId = (branchId: string) => students.filter(s => s.branchId === branchId);
-export const getStudentsByRoomId = (roomId: string) => students.filter(s => s.roomId === roomId);
+export const getBranchById = (id) => branches.find(b => b.id === id);
+export const getRoomsByBranchId = (branchId) => rooms.filter(r => r.branchId === branchId);
+export const getStudentsByBranchId = (branchId) => students.filter(s => s.branchId === branchId);
+export const getStudentsByRoomId = (roomId) => students.filter(s => s.roomId === roomId);

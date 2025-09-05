@@ -24,7 +24,7 @@ export default function Branches() {
     branch.city.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  const getOccupancyColor = (rate: number) => {
+  const getOccupancyColor = (rate) => {
     if (rate >= 90) return "bg-success text-success-foreground";
     if (rate >= 70) return "bg-warning text-warning-foreground";
     return "bg-destructive text-destructive-foreground";
