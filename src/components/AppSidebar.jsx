@@ -36,8 +36,9 @@ const managementItems = [
 ];
 
 export function AppSidebar() {
-  const { state: collapsed } = useSidebar();
+  const { state } = useSidebar();
   const location = useLocation();
+  const collapsed = state === "collapsed";
 
   const getNavClass = (path) => {
     const isActive = location.pathname === path;
